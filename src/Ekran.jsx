@@ -8,7 +8,7 @@ function Ekran() {
     if(ekranBilgi[0] < 500)
         return <p style={{color:"red"}}>Uygulamayı en az 500px genişlikte görüntüleyebilirsiniz.</p>
 
-    if(!baglantiVarmi)
+    if(!baglantiVarmi) 
         return <p style={{color:"red"}}>İnternet bağlantısı kesildi! Uygulamayı kullanmak için tekrar internete bağlanın.</p>
 
         

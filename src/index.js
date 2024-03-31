@@ -8,10 +8,11 @@ import Yazilar from './Yazilar';
 import Yorumlar from './Yorumlar';
 import Sayac from './Sayac';
 import Ekran from './Ekran';
+import FormComponent from './FormComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <>
-        <Ekran />
+        <FormComponent />
     </>
 );
