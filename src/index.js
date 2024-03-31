@@ -7,10 +7,11 @@ import Kullanicilar from './Kullanicilar';
 import Yazilar from './Yazilar';
 import Yorumlar from './Yorumlar';
 import Sayac from './Sayac';
+import Ekran from './Ekran';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <>
-        <Sayac />
+        <Ekran />
     </>
 );

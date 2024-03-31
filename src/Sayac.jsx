@@ -3,8 +3,8 @@ import useLS from "./yardimcilar/UsLS"
 
 function Sayac() {
     const [suankiDeger, degeriGuncelle] = useLS("sayac", 0)
-    const [kullanicilar, kullanicilarGuncelle] = useLS("kullanicilar", [{id: 1, ad: 'Ahmet'}])
-
+    const [kullanicilar, kullanicilarGuncelle] = useLS("kullanicilar", [{id:1,ad:"Ahmet"}])
+    
     return (
         <>
             <div>Sayaç: {suankiDeger}</div>
@@ -15,6 +15,10 @@ function Sayac() {
 
             <div>
                 <h3>Kullanıcılar</h3>
+                <div>
+                    <button onClick={()=> { kullanicilarGuncelle( [...kullanicilar, {id:3, ad:"Eda"}]  ) }}>3 nolu Kullanıcı Ekle</button>
+
+                </div>
                 <ul>
                     {kullanicilar.map( kullanici=> {
                         return <li key={kullanici.id} > {kullanici.ad} </li>
