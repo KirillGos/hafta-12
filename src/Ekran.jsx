@@ -1,10 +1,17 @@
+import useBaglanti from "./yardimcilar/useBaglanti"
 import useResize from "./yardimcilar/useResize"
 
 function Ekran() {
     const ekranBilgi = useResize()
+    const baglantiVarmi = useBaglanti()
 
-    if(ekranBilgi[0] < 500) 
-        return <p style={{color: "red"}}>Hata</p>
+    if(ekranBilgi[0] < 500)
+        return <p style={{color:"red"}}>Uygulamayı en az 500px genişlikte görüntüleyebilirsiniz.</p>
+
+    if(!baglantiVarmi)
+        return <p style={{color:"red"}}>İnternet bağlantısı kesildi! Uygulamayı kullanmak için tekrar internete bağlanın.</p>
+
+        
     return (
 
         <>
